@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Subject from "./mydir/Subject";
+import Welcome from "./mydir/Func";
 
 // const App = () => {
 function App() {
@@ -26,9 +27,16 @@ function App() {
       <Subject 
         title = {subject.title}
         subtitle = {subject.subtitle}
-        onChangePage = {handleChangePage}
+        changePage = {handleChangePage}
       />
       {/* onChangePage : App에서 Subject컴포넌트로 전달되는 이벤트 핸들러 */}
+
+      <br/>
+      <Welcome
+        subtitle = {subject.subtitle}
+        friends = {friends}
+        changePage = {handleChangePage}  
+      />
     </div>
   );
 }
